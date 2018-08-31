@@ -1,0 +1,104 @@
+<!doctype html>
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+   <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<!--(f146)-->
+<style>
+    
+ul {
+  list-style: none;
+  padding:0;
+    padding-bottom: 2%;
+}
+li {
+  padding-left: 1.3em;
+  border-left: 1px dotted;
+  padding-left: 30px;
+  margin-left: 16px;
+}
+span.icon:after {
+  content: "\f0fe"; /* FontAwesome Unicode */
+  font-family: FontAwesome;
+  display: inline-block;
+  margin-left: -2.5em; /* same as padding-left set on li */
+  width: 20px; /* same as padding-left set on li */
+}
+  span.iconOnClick:after {
+  content: "\f146"; /* FontAwesome Unicode */
+  font-family: FontAwesome;
+  display: inline-block;
+  margin-left: -2.5em; /* same as padding-left set on li */
+  width: 20px; /* same as padding-left set on li */
+}
+ span.folder:before {
+ content:'';
+  border-bottom:1px dotted;
+  width:10px;
+  display:inline-block;
+  vertical-align:middle;
+}
+/*
+span.folder:after {
+ content:'';
+  border-bottom:1px dotted;
+  width:10px;
+  display:inline-block;
+  vertical-align:middle;
+}
+*/
+    ul li:last-child {
+        border-left: none;
+    }    
+
+ul li:before {
+ content:'';
+  border-bottom:1px dotted;
+  width:10px;
+  display:inline-block;
+  vertical-align:middle;
+}
+    
+</style>
+
+<body class="container">
+<div class="row" style="height: 500px">
+    <ul style="position: absolute; top:10%; left:25%"><span class="folder"></span><span class="glyphicon glyphicon-folder-open icon" onclick="callMe(this)"></span>
+        <li>
+            <ul><span class="folder"></span><span class="glyphicon glyphicon-folder-open icon" onclick="callMe(this)"></span>
+                <li><span class="glyphicon glyphicon-file"></span></li>
+                <li><span class="glyphicon glyphicon-file"></span></li>
+            </ul>
+        </li>
+        
+        <li>
+            <ul><span class="folder"></span><span class="glyphicon glyphicon-folder-open icon" onclick="callMe(this)"></span>
+                <li><span class="glyphicon glyphicon-file"></span></li>
+                
+                <li>
+                    <ul><span class="folder"></span><span class="glyphicon glyphicon-folder-open icon" onclick="callMe(this)"></span>
+                        <li><span class="glyphicon glyphicon-file"></span></li>
+                        <li><span class="glyphicon glyphicon-file"></span></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><span class="glyphicon glyphicon-file"></span></li>
+    </ul>
+    </div>
+    
+    <div class="row" id="output">
+    </div>
+ 
+</body>
+
+<script src="toggle.js"></script>
+</html>
+
+<!--CNATION-->
